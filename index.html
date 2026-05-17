@@ -232,6 +232,43 @@ section{padding: 120px 0; position:relative}
   min-height: 620px;
   display:grid;place-items:center;
 }
+.device-mock{
+  width: min(460px, 92%);
+  margin: 0 auto;
+}
+.device-mock--wide{
+  width: min(560px, 96%);
+}
+.device-frame{
+  position: relative;
+  background: var(--ink);
+  padding: 14px;
+  border-radius: 34px;
+  border: 1px solid rgba(176,210,223,0.2);
+  box-shadow:
+    0 50px 90px -30px rgba(5,29,65,0.45),
+    0 18px 40px -20px rgba(5,29,65,0.3),
+    inset 0 0 0 1px rgba(176,210,223,0.15);
+  transform: rotate(-2deg);
+}
+.device-screen{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
+.device-notch{
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 16px;
+  background: var(--ink);
+  border-radius: 0 0 12px 12px;
+  box-shadow: inset 0 0 0 1px rgba(176,210,223,0.15);
+  z-index: 2;
+}
 .phone{
   width: 320px; height: 620px;
   background: var(--ink);
@@ -828,7 +865,7 @@ footer{
     </a>
     <nav class="nav-links">
       <a href="#benefits">Como funciona</a>
-      <a href="#why">Por quê Descarrega Ai</a>
+      <a href="#why">Por que Descarrega Ai</a>
       <a href="#features">Recursos</a>
       <a href="#voices">Histórias</a>
       <a href="Para Empresas.html">Para gestores</a>
@@ -854,7 +891,7 @@ footer{
         <span class="italic-accent">De verdade.</span>
       </h1>
       <p class="lead">
-        No Descarrega Ai, você relata problemas, conflitos e pressões sem expor sua identidade. Apenas o seu setor é registrado. A empresa recebe inteligência clara sobre o clima real — antes que o funcionário peça demissão.
+        O Descarrega Ai está em fase de lançamento. Você relata problemas, conflitos e pressões sem expor sua identidade. Apenas o seu setor é registrado. Estamos validando o fluxo com os primeiros times antes da abertura geral.
       </p>
       <div class="hero-actions">
         <a href="#app" class="btn btn-primary">
@@ -869,75 +906,21 @@ footer{
 
       <div class="trust">
         <div class="avatars">
-          <span class="av av1">A</span>
-          <span class="av av2">M</span>
-          <span class="av av3">R</span>
-          <span class="av av4">+2k</span>
+          <span class="av av1">B</span>
+          <span class="av av2">E</span>
+          <span class="av av3">T</span>
+          <span class="av av4">beta</span>
         </div>
-        <span>Colaboradores compartilhando feedback seguro com suas empresas</span>
+        <span>Convite aberto para os primeiros colaboradores e times piloto.</span>
       </div>
     </div>
 
-    <!-- Phone mockup -->
+    <!-- System image -->
     <div class="hero-mock">
-      <div class="phone" id="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="app-status">
-            <span>9:41</span>
-            <div class="right"><span></span><span></span><span></span></div>
-          </div>
-          <div class="app-body">
-            <div>
-              <div class="app-greet">Quinta-feira · 14h 22</div>
-              <div class="app-name">Olá, Helena.<br/><em>Como você está agora?</em></div>
-            </div>
-
-            <div class="mood-card">
-              <div class="mood-row">
-                <span class="mood-label">Equilíbrio emocional</span>
-                <span class="mood-status"><span class="pulse"></span>Estável</span>
-              </div>
-              <div class="mood-num" id="moodNum">7<small>.4</small></div>
-              <div class="mood-caption">Melhor que ontem · +0.6 esta semana</div>
-            </div>
-
-            <div class="breath-card">
-              <div class="breath-ring" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 4-3 6-7 13C8 15 5 13 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2"/></svg>
-              </div>
-              <div class="breath-text">
-                <small>Sessão sugerida</small>
-                <strong>Respiração 4·7·8 · 3 min</strong>
-              </div>
-            </div>
-
-            <div class="app-tabs">
-              <div class="app-tab active">Hoje</div>
-              <div class="app-tab">Sessões</div>
-              <div class="app-tab">Insights</div>
-              <div class="app-tab">Você</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="float-card fc-1">
-        <div class="fc-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <div class="fc-text">
-          <small>Frequência</small>
-          <strong>72 bpm</strong>
-        </div>
-      </div>
-      <div class="float-card fc-2">
-        <div class="fc-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7L9 18l-5-5"/></svg>
-        </div>
-        <div class="fc-text">
-          <small>Pausa concluída</small>
-          <strong>3 min · respiração</strong>
+      <div class="device-mock">
+        <div class="device-frame">
+          <span class="device-notch" aria-hidden="true"></span>
+          <img class="device-screen" src="assets/tela_sistema.png" alt="Tela do sistema Descarrega Ai" />
         </div>
       </div>
     </div>
@@ -947,13 +930,13 @@ footer{
   <div class="wrap">
     <div class="partners">
       <div class="partners-inner">
-        <small>Em uso em empresas de tecnologia, saúde e finanças</small>
+        <small>Piloto aberto para empresas de tecnologia, saúde e finanças</small>
         <div class="partner-logos">
-          <span class="partner-logo" style="font-style:italic">Lumen &amp; Co.</span>
-          <span class="partner-logo">CONSORTA</span>
-          <span class="partner-logo" style="letter-spacing:0.2em;font-family:var(--mono);font-size:13px">VERTICE</span>
-          <span class="partner-logo">Aldebra</span>
-          <span class="partner-logo" style="font-style:italic">Margem</span>
+          <span class="partner-logo" style="font-style:italic">Tecnologia</span>
+          <span class="partner-logo">Saúde</span>
+          <span class="partner-logo" style="letter-spacing:0.2em;font-family:var(--mono);font-size:13px">Finanças</span>
+          <span class="partner-logo">Indústria</span>
+          <span class="partner-logo" style="font-style:italic">Varejo</span>
         </div>
       </div>
     </div>
@@ -978,8 +961,8 @@ footer{
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
         <div>
-          <h3>Relatore de forma<br/>totalmente anônima</h3>
-          <p>Seu nome nunca é registrado. Apenas o setor onde você trabalha. Feedback honesto sem medo de represálias.</p>
+          <h3>Relate de forma<br/>totalmente anônima</h3>
+          <p>Seu nome nunca é registrado. Registramos apenas o setor onde você trabalha. Feedback honesto, sem medo de represálias.</p>
         </div>
       </div>
 
@@ -1023,7 +1006,7 @@ footer{
         </div>
         <div>
           <h3>Diferentes tipos<br/>de feedback</h3>
-          <p>Escolha entre problemas, conflitos, pressão, assédio, sobrecarga, insegurança ou sugestões e melhorias.</p>
+          <p>Os relatos mais comuns são ansiedade e impacto na saúde mental (35%), medo ou silêncio para falar com o superior (22%), pressão por metas e sobrecarga (22%), conflitos e falha de comunicação (22%) e liderança despreparada (17%).</p>
         </div>
       </div>
 
@@ -1034,7 +1017,7 @@ footer{
         </div>
         <div>
           <h3>Disponível sempre<br/>que precisar</h3>
-          <p>Acesso 24/7 através da web. Relatar um problema leva 2 minutos. Seu feedback está sempre seguro.</p>
+          <p>Acesso 24/7 pela web. Relatar um problema leva 2 minutos. Seu feedback está sempre seguro.</p>
         </div>
       </div>
     </div>
@@ -1048,7 +1031,7 @@ footer{
       <div class="eyebrow on-dark"><span class="dot"></span>Como funciona</div>
       <div class="section-head" style="margin-bottom:0">
         <h2 style="color:var(--on-dark)">Três passos simples<br/><span class="italic-accent on-dark">para feedback que gera mudança.</span></h2>
-        <p class="lead" style="color: var(--on-dark-muted)">Um fluxo desenhado para ser confidencial, rápido e eficaz. Você relata, a empresa escuta, e sinais de alerta ativam antes da crise.</p>
+        <p class="lead" style="color: var(--on-dark-muted)">Um fluxo desenhado para ser confidencial, rápido e eficaz. Você relata, a empresa escuta e sinais de alerta são acionados antes da crise.</p>
       </div>
     </div>
 
@@ -1084,7 +1067,7 @@ footer{
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
           <h3>Gestores recebem<br/>alertas inteligentes</h3>
-          <p>Se muitos relatarem o mesmo problema: risco de burnout, conflitos internos, queda de produtividade, possível rotatividade. Seu time identifica sinais antes que alguém peça demissão.</p>
+          <p>Se muitas pessoas relatarem o mesmo problema, há risco de burnout, conflitos internos, queda de produtividade e possível rotatividade. Seu time identifica sinais antes que alguém peça demissão.</p>
         </div>
       </div>
     </div>
@@ -1098,15 +1081,15 @@ footer{
       <div class="reveal">
         <div class="eyebrow"><span class="dot"></span>O diferencial</div>
         <h2 style="margin-top:24px">Muitas empresas só percebem<br/><span class="italic-accent">quando o funcionário pede demissão.</span></h2>
-        <p class="lead">Sinais de burnout, conflitos internos, pressão extrema, assédio — tudo invisível até ser tarde demais. O Descarrega Ai ajuda você e sua empresa a identificar esses problemas antes que virem desligamentos.</p>
+        <p class="lead">Pesquisa interna com 60 colaboradores indica um clima frágil: apenas 45% descrevem o ambiente de forma positiva. Quando a liderança se aproxima, a percepção de segurança emocional aumenta; quando é distante, há desmotivação, desgaste mental e perda de confiança. A causa raiz apontada foi a ausência de um canal seguro para relatar problemas à liderança sem medo de retaliação.</p>
         <div class="problem-stats">
           <div class="stat">
-            <div class="big">85<sub>%</sub></div>
-            <p>dos pedidos de demissão poderiam ter sido evitados com feedback claro sobre clima organizacional.</p>
+            <div class="big">67<sub>%</sub></div>
+            <p>vivenciam insegurança no trabalho.</p>
           </div>
           <div class="stat">
-            <div class="big">3,5<sub>×</sub></div>
-            <p>mais caro contratar e treinar um novo colaborador do que manter um que pensa em sair.</p>
+            <div class="big">52<sub>%</sub></div>
+            <p>descrevem o ambiente como tenso, pressionado ou instável.</p>
           </div>
         </div>
       </div>
@@ -1121,12 +1104,12 @@ footer{
         </div>
         <div class="pv-foot">
           <div>
-            <strong>+42%</strong>
-            <span>em relatos de pressão</span>
+            <strong>44%</strong>
+            <span>relatam insegurança com frequência</span>
           </div>
           <div style="text-align:right">
-            <strong>3 setores</strong>
-            <span>em risco de burnout</span>
+            <strong>22%</strong>
+            <span>medo de falar com o superior</span>
           </div>
         </div>
       </div>
@@ -1139,26 +1122,23 @@ footer{
   <div class="wrap">
     <div class="section-head reveal">
       <div>
-        <div class="eyebrow"><span class="dot"></span>Histórias</div>
-        <h2>O que colaboradores falam<br/><span class="italic-accent">sobre relatar com segurança.</span></h2>
+        <div class="eyebrow"><span class="dot"></span>Vozes da pesquisa</div>
+        <h2>Relatos reais<br/><span class="italic-accent">da pesquisa interna.</span></h2>
       </div>
-      <p>Cada voz importa. Quando colaboradores confiam no processo, empresas ganham inteligência de verdade sobre seu clima organizacional.</p>
-        <h2>Profissionais que voltaram<br/><span class="italic-accent">a se sentir gente.</span></h2>
-      </div>
-      <p>Mais de 12 mil pessoas usam o Descarrega Ai durante o expediente. Aqui está o que algumas delas têm dito.</p>
+      <p>Pesquisa interna com 60 colaboradores sobre insegurança e clima organizacional.</p>
     </div>
 
     <div class="testi-grid">
       <div class="testi featured reveal">
         <div>
           <div class="testi-mark">“</div>
-          <p class="testi-quote">Antes do Descarrega Ai, eu chegava em casa exausta sem entender por quê. Hoje reconheço meus gatilhos no momento em que acontecem — e isso mudou a forma como eu trabalho e como eu vivo fora dele.</p>
+          <p class="testi-quote">É difícil falar com os gestores, temos que seguir exatamente o que eles falam, sem questionar nem dar feedback.</p>
         </div>
         <div class="testi-author">
-          <span class="av">H</span>
+          <span class="av">P</span>
           <div>
-            <strong>Helena Marques</strong>
-            <small>Diretora de Operações · Fintech</small>
+            <strong>Colaborador da pesquisa</strong>
+            <small>Pesquisa interna</small>
           </div>
         </div>
       </div>
@@ -1166,13 +1146,13 @@ footer{
       <div class="testi reveal">
         <div>
           <div class="testi-mark">“</div>
-          <p class="testi-quote">Um respiro de 3 minutos antes de uma reunião difícil virou rotina. Pequeno, discreto, transformador.</p>
+          <p class="testi-quote">Tenho medo de falar e reclamar, acabo comentando com os colegas.</p>
         </div>
         <div class="testi-author">
-          <span class="av">R</span>
+          <span class="av">C</span>
           <div>
-            <strong>Ricardo Antunes</strong>
-            <small>Gerente de Engenharia</small>
+            <strong>Colaborador</strong>
+            <small>Pesquisa interna</small>
           </div>
         </div>
       </div>
@@ -1180,13 +1160,13 @@ footer{
       <div class="testi reveal">
         <div>
           <div class="testi-mark">“</div>
-          <p class="testi-quote">A empresa não vê meus dados. Eu vejo. E isso me fez confiar o suficiente para começar a cuidar de mim.</p>
+          <p class="testi-quote">Não nos sentimos seguros para falar sobre o que sentimos e os problemas.</p>
         </div>
         <div class="testi-author">
-          <span class="av">M</span>
+          <span class="av">C</span>
           <div>
-            <strong>Marina Bauer</strong>
-            <small>Advogada · Contencioso</small>
+            <strong>Colaborador</strong>
+            <small>Pesquisa interna</small>
           </div>
         </div>
       </div>
@@ -1229,7 +1209,7 @@ footer{
             <span class="brand-sub">Ouvidoria Interna</span>
           </span>
         </a>
-        <p>Ouvidoria interna para empresas que querem ouvir seus colaboradores antes de perder talentos. Feedback anônimo, inteligência clara, ação preventiva.</p>
+        <p>Ouvidoria interna para empresas que querem ouvir seus colaboradores antes de perder talentos. Feedback anônimo, inteligência clara e ação preventiva.</p>
         <div class="socials" style="margin-top:24px">
           <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -1320,13 +1300,15 @@ setInterval(() => {
 
 // Subtle mood number live update
 const moodEl = document.getElementById('moodNum');
-const moodValues = ['7.4','7.5','7.6','7.5','7.4','7.3','7.4'];
-let mi = 0;
-setInterval(() => {
-  mi = (mi + 1) % moodValues.length;
-  const [intPart, decPart] = moodValues[mi].split('.');
-  moodEl.innerHTML = intPart + '<small>.' + decPart + '</small>';
-}, 2400);
+if (moodEl){
+  const moodValues = ['7.4','7.5','7.6','7.5','7.4','7.3','7.4'];
+  let mi = 0;
+  setInterval(() => {
+    mi = (mi + 1) % moodValues.length;
+    const [intPart, decPart] = moodValues[mi].split('.');
+    moodEl.innerHTML = intPart + '<small>.' + decPart + '</small>';
+  }, 2400);
+}
 
 // Build problem chart bars
 const chart = document.getElementById('pvChart');
@@ -1355,12 +1337,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 // Tab cycling in phone
 const tabs = document.querySelectorAll('.app-tab');
-let ti = 0;
-setInterval(() => {
-  if (document.hidden) return;
-  ti = (ti + 1) % tabs.length;
-  tabs.forEach((t, idx) => t.classList.toggle('active', idx === ti));
-}, 3200);
+if (tabs.length){
+  let ti = 0;
+  setInterval(() => {
+    if (document.hidden) return;
+    ti = (ti + 1) % tabs.length;
+    tabs.forEach((t, idx) => t.classList.toggle('active', idx === ti));
+  }, 3200);
+}
 </script>
 
 </body>
