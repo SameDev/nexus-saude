@@ -3,25 +3,25 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nexus para Empresas — Saúde Corporativa</title>
+<title>Descarrega Ai para Empresas — Ouvidoria Interna e Inteligência de Clima</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --ink: #051D41;
-  --ink-2: #0a2a55;
-  --paper: #F3FCFF;
+  --ink: #0b1a35;
+  --ink-2: #0f2b4f;
+  --paper: #f4fbff;
   --paper-2: #ffffff;
-  --mist: #B0D2DF;
-  --mist-soft: #D8E9F0;
-  --line: rgba(5,29,65,0.10);
-  --line-2: rgba(5,29,65,0.18);
-  --muted: rgba(5,29,65,0.62);
-  --muted-2: rgba(5,29,65,0.78);
+  --mist: #d7edf8;
+  --mist-soft: #e9f5fb;
+  --line: rgba(11,26,53,0.10);
+  --line-2: rgba(11,26,53,0.18);
+  --muted: rgba(11,26,53,0.62);
+  --muted-2: rgba(11,26,53,0.78);
   --on-dark: #FFFFFF;
   --on-dark-muted: rgba(255,255,255,0.72);
-  --on-dark-line: rgba(176,210,223,0.22);
+  --on-dark-line: rgba(215,237,248,0.28);
   --shadow-1: 0 1px 2px rgba(5,29,65,0.04), 0 6px 24px -10px rgba(5,29,65,0.12);
   --shadow-2: 0 1px 3px rgba(5,29,65,0.06), 0 20px 60px -20px rgba(5,29,65,0.25);
   --serif: "Cormorant Garamond", "Iowan Old Style", Garamond, serif;
@@ -90,7 +90,17 @@ section{padding: 120px 0; position:relative}
 .nav-shell.scrolled{padding: 12px 0;background: rgba(243,252,255,0.72);backdrop-filter: saturate(180%) blur(18px);-webkit-backdrop-filter: saturate(180%) blur(18px);border-bottom: 1px solid var(--line);}
 .nav{display:flex;align-items:center;justify-content:space-between;gap: 24px;}
 .brand{display:flex;align-items:center;gap:12px;font-family: var(--serif);font-size: 22px; font-weight: 500;letter-spacing: 0.02em;}
-.brand-mark{width: 36px; height:36px; border-radius: 10px;background: var(--ink);display:grid;place-items:center;color: var(--on-dark);font-family: var(--serif);font-size: 18px;position:relative;overflow:hidden;}
+.brand-mark{
+  width: 36px; height:36px; border-radius: 10px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  display:grid;place-items:center;
+  color: var(--on-dark);
+  font-family: var(--serif);
+  font-size: 18px;
+  position:relative;overflow:hidden;
+}
+.brand-mark img{width:100%;height:100%;object-fit:contain}
 .brand-sub{font-size: 10px;text-transform: uppercase; letter-spacing: 0.18em;color: var(--muted); margin-top: 2px;font-weight:600;}
 .brand-text{display:flex;flex-direction:column;line-height:1;gap:2px}
 .nav-links{display:flex;gap: 36px}
@@ -371,6 +381,38 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
 
 .reveal{opacity:0;transform: translateY(20px);transition: opacity .8s ease, transform .8s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
+
+/* ---------- Responsive refinements ---------- */
+@media (max-width: 1024px){
+  .hero{padding-bottom:80px}
+  .hero-grid{gap:40px}
+  .dash{padding:18px}
+  .dash-window{margin:-18px -18px 18px}
+}
+@media (max-width: 880px){
+  .dash-grid{grid-template-columns:1fr}
+  .dash-card.wide{grid-column:auto}
+}
+@media (max-width: 720px){
+  .hero-meta{gap:20px}
+  .outcomes-grid{grid-template-columns:1fr}
+  .outcome{border-right:0;border-bottom:1px solid var(--line)}
+  .outcome:last-child{border-bottom:0}
+  .features-grid{gap:16px}
+  .rollout{padding:60px 24px;margin:0 16px}
+  .case-card{padding:48px 28px}
+  .demo-card{padding:40px 24px}
+  .faq-grid{gap:32px}
+}
+@media (max-width: 520px){
+  .nav-cta{flex-wrap:wrap;gap:10px}
+  .btn{padding: 11px 18px; font-size: 14px}
+  .hero-actions .btn{width:100%;justify-content:center}
+  .dash-window{flex-wrap:wrap;gap:10px}
+  .dash-url{width:100%}
+  .plan{padding:28px 24px}
+  .foot-bottom{flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
 <body>
@@ -378,22 +420,18 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
 <!-- NAV -->
 <div class="nav-shell" id="navShell">
   <div class="wrap nav">
-    <a class="brand" href="Landing Page.html" aria-label="Nexus">
+    <a class="brand" href="Landing Page.html" aria-label="Descarrega Ai">
       <span class="brand-mark" aria-hidden="true">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 5v9a4 4 0 0 0 8 0V5" stroke="#B0D2DF"/>
-          <path d="M10 5v15" stroke="#B0D2DF"/>
-          <path d="M14 19V8l6 11V8" />
-        </svg>
+        <img src="assets/logo_descarrega_ai.jpeg" alt="Descarrega Ai" />
       </span>
       <span class="brand-text">
-        <span>Nexus</span>
-        <span class="brand-sub">Saúde Corporativa</span>
+        <span>Descarrega Ai</span>
+        <span class="brand-sub">Ouvidoria Interna</span>
       </span>
     </a>
     <nav class="nav-links">
-      <a href="Landing Page.html#benefits">Para profissionais</a>
-      <a href="#outcomes" class="current">Para empresas</a>
+      <a href="index.html#benefits">Para colaboradores</a>
+      <a href="#outcomes" class="current">Para gestores</a>
       <a href="#rollout">Implementação</a>
       <a href="#privacy">Segurança</a>
       <a href="#pricing">Planos</a>
@@ -401,7 +439,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
     <div class="nav-cta">
       <a href="#login" class="btn btn-ghost">Entrar</a>
       <a href="#demo" class="btn btn-primary">
-        Solicitar demonstração
+        Solicitar apresentação
         <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
     </div>
@@ -413,17 +451,17 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
   <div class="hero-bg"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="eyebrow"><span class="dot"></span>Nexus para Empresas · RH · Pessoas &amp; Cultura</div>
+      <div class="eyebrow"><span class="dot"></span>Ouvidoria Interna · Inteligência de Clima Organizacional</div>
       <h1>
-        Cuide do seu time
-        <span class="italic-accent">antes que o burnout cuide.</span>
+        Seu time fala.
+        <span class="italic-accent">Você finalmente ouve.</span>
       </h1>
       <p class="lead">
-        Uma plataforma de saúde emocional desenhada para empresas que dependem de pessoas inteiras. Reduza turnover, antecipe sinais de esgotamento e construa uma cultura onde performance e bem-estar caminham juntos.
+        Uma plataforma de ouvidoria interna para empresas que querem detectar problemas organizacionais antes de perder talentos. Feedback anônimo por setor, alertas inteligentes sobre risco de burnout, conflitos internos e alta rotatividade.
       </p>
       <div class="hero-actions">
         <a href="#demo" class="btn btn-primary">
-          Solicitar demonstração
+          Solicitar apresentação
           <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
         <a href="#pricing" class="btn btn-outline">Ver planos</a>
@@ -439,7 +477,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
     <div class="dash">
       <div class="dash-window">
         <div class="dash-dots"><span></span><span></span><span></span></div>
-        <div class="dash-url">nexus.app/empresa/aldebra</div>
+        <div class="dash-url">descarrega.ai/empresa/aldebra</div>
         <div style="width:50px"></div>
       </div>
       <div class="dash-grid">
@@ -497,7 +535,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
   <div class="wrap">
     <div class="trust-strip">
       <div class="trust-inner">
-        <small>Empresas que confiam no Nexus para cuidar de seus times</small>
+        <small>Empresas que confiam no Descarrega Ai para cuidar de seus times</small>
         <div class="trust-logos">
           <span style="font-style:italic">Lumen &amp; Co.</span>
           <span>CONSORTA</span>
@@ -516,32 +554,32 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
   <div class="wrap">
     <div class="section-head reveal">
       <div>
-        <div class="eyebrow"><span class="dot"></span>Resultados mensuráveis</div>
-        <h2>O que muda quando<br/><span class="italic-accent">as pessoas se sentem cuidadas.</span></h2>
+        <div class="eyebrow"><span class="dot"></span>Impacto detectável</div>
+        <h2>Números que revelam<br/><span class="italic-accent">o que muda com feedback real.</span></h2>
       </div>
-      <p>Indicadores médios reportados por empresas com mais de 100 colaboradores que usam o Nexus há pelo menos 6 meses. Os números falam por si.</p>
+      <p>Resultados reportados por empresas que usam Descarrega Ai para ouvidoria interna. O que você consegue medir quando escuta de verdade.</p>
     </div>
 
     <div class="outcomes-grid reveal">
       <div class="outcome">
-        <span class="label">Saúde mental</span>
-        <div class="big">−42<sub>%</sub></div>
-        <p>Redução em afastamentos por ansiedade e depressão.</p>
+        <span class="label">Rotatividade</span>
+        <div class="big">−31<sub>%</sub></div>
+        <p>Redução em pedidos de demissão após 6 meses.</p>
       </div>
       <div class="outcome">
-        <span class="label">Retenção</span>
-        <div class="big">2,3<sub>×</sub></div>
-        <p>Mais retenção em cargos críticos durante 12 meses.</p>
+        <span class="label">Detecção</span>
+        <div class="big">89<sub>%</sub></div>
+        <p>De problemas identificados antes da crise.</p>
       </div>
       <div class="outcome">
         <span class="label">Engajamento</span>
-        <div class="big">+38<sub>%</sub></div>
-        <p>Aumento na pesquisa de clima e pertencimento.</p>
+        <div class="big">+27<sub>%</sub></div>
+        <p>Aumento em confiança com gestão e RH.</p>
       </div>
       <div class="outcome">
         <span class="label">ROI</span>
-        <div class="big">4,7<sub>×</sub></div>
-        <p>De retorno para cada real investido no programa.</p>
+        <div class="big">6,2<sub>×</sub></div>
+        <p>Economia por retenção vs. custos de implementação.</p>
       </div>
     </div>
   </div>
@@ -552,76 +590,76 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
   <div class="wrap">
     <div class="section-head reveal">
       <div>
-        <div class="eyebrow"><span class="dot"></span>Para quem decide pelo time</div>
-        <h2>Tudo o que o RH precisa,<br/><span class="italic-accent">sem invadir ninguém.</span></h2>
+        <div class="eyebrow"><span class="dot"></span>Painel de Gestores</div>
+        <h2>Inteligência clara sobre<br/><span class="italic-accent">o que suas equipes precisam.</span></h2>
       </div>
-      <p>Dashboards agregados, alertas precoces, conteúdo clínico e suporte humano. O time cuida da própria saúde mental — você acompanha a cultura, nunca a pessoa.</p>
+      <p>Relatórios emocionais por setor, alertas de burnout, indicadores de clima organizacional e frequência de relatos. Você entende o clima real — sem invadir privacidade.</p>
     </div>
 
     <div class="features-grid">
       <div class="feat reveal">
         <span class="num">01 / 06</span>
         <div class="feat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
         <div>
-          <h3>Dashboards agregados<br/>e anonimizados</h3>
-          <p>Visualize tendências por área, senioridade e turno — sem nunca acessar dados individuais. Mínimo de 10 pessoas por recorte para garantir anonimato.</p>
+          <h3>Relatórios de Clima<br/>por Setor</h3>
+          <p>Visualize indicadores agregados de pressão, conflitos, satisfação e bem-estar. Dados sempre anônimos, com mínimo de 10 pessoas por recorte.</p>
         </div>
       </div>
 
       <div class="feat reveal">
         <span class="num">02 / 06</span>
         <div class="feat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M12 7l-5 5M12 17l5-5"/></svg>
         </div>
         <div>
-          <h3>Alertas precoces<br/>de burnout</h3>
-          <p>Modelos clínicos identificam sinais de sobrecarga em áreas inteiras antes que se tornem afastamentos. Sugestões de ações concretas para cada caso.</p>
+          <h3>Alertas Inteligentes<br/>de Risco</h3>
+          <p>Sistema detecta automaticamente: risco de burnout, conflitos internos, queda de produtividade, sinais de possível rotatividade. Ativa quando evidência é clara.</p>
         </div>
       </div>
 
       <div class="feat reveal">
         <span class="num">03 / 06</span>
         <div class="feat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
         </div>
         <div>
-          <h3>Time clínico<br/>de plantão</h3>
-          <p>Psicólogos, psiquiatras e médicas do trabalho disponíveis em chat e vídeo. Encaixe rápido e atendimento contínuo para casos complexos.</p>
+          <h3>Indicadores de<br/>Satisfação</h3>
+          <p>Veja quais setores têm maior insegurança, pressão ou conflito. Tendências ao longo do tempo. Comparações internas (benchmarking).</p>
         </div>
       </div>
 
       <div class="feat reveal">
         <span class="num">04 / 06</span>
         <div class="feat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <div>
-          <h3>Integrações<br/>com seu ecossistema</h3>
-          <p>SSO via Okta, Azure AD e Google. Integração nativa com Slack, Teams, BambooHR e Gupy. Provisionamento automático em poucos minutos.</p>
+          <h3>Dashboard Unificado<br/>em Tempo Real</h3>
+          <p>Painel único com todos os setores, tipos de feedback (conflitos, pressão, assédio, sobrecarga), frequência de relatos e evolução temporal.</p>
         </div>
       </div>
 
       <div class="feat reveal">
         <span class="num">05 / 06</span>
         <div class="feat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
         </div>
         <div>
-          <h3>Programas sob medida<br/>para sua cultura</h3>
-          <p>Ciclos temáticos co-criados com seu RH: pré-deadline, pós-reestruturação, integração de novas lideranças. Conteúdo guiado por especialistas.</p>
+          <h3>Sugestões de Ação<br/>Executiva</h3>
+          <p>Não é apenas diagnóstico. Para cada alerta, recomendações concretas baseadas em boas práticas de gestão de clima organizacional.</p>
         </div>
       </div>
 
       <div class="feat reveal">
         <span class="num">06 / 06</span>
         <div class="feat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <div>
-          <h3>Relatórios trimestrais<br/>com seu CSM</h3>
-          <p>Customer Success dedicado, com leitura clínica dos seus indicadores e plano de ação por trimestre. Não somos uma ferramenta — somos parceiros de cultura.</p>
+          <h3>Suporte de CS<br/>Dedicado</h3>
+          <p>Customer Success e clínica disponíveis para interpretar dados, validar hipóteses e planejar ações. Não somos ferramenta — somos parceiros.</p>
         </div>
       </div>
     </div>
@@ -635,7 +673,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
       <div class="eyebrow on-dark"><span class="dot"></span>Implementação</div>
       <div class="section-head" style="margin-bottom:0">
         <h2 style="color:var(--on-dark)">Do contrato à cultura<br/><span class="italic-accent on-dark">em poucas semanas.</span></h2>
-        <p class="lead" style="color: var(--on-dark-muted)">Implantação assistida pelo nosso time de Customer Success e Clínica. Você cuida da comunicação interna; nós cuidamos do resto.</p>
+        <p class="lead" style="color: var(--on-dark-muted)">Implantação assistida com diagnóstico clínico, integração técnica e comunicação interna. Sua empresa começa a ouvir desde a semana 1.</p>
       </div>
     </div>
 
@@ -643,23 +681,23 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
       <div class="timeline">
         <div class="tl-row">
           <div class="tl-week">Semana 1</div>
-          <div class="tl-title">Diagnóstico e desenho do programa</div>
-          <div class="tl-desc">Workshops com RH e lideranças para mapear pontos de dor, definir métricas e personalizar o conteúdo clínico.</div>
+          <div class="tl-title">Diagnóstico e Customização</div>
+          <div class="tl-desc">Workshops com RH e lideranças para mapear pain points, definir métricas-chave e personalizar categorias de feedback.</div>
         </div>
         <div class="tl-row">
           <div class="tl-week">Semana 2 — 3</div>
-          <div class="tl-title">Integração técnica e SSO</div>
-          <div class="tl-desc">Configuração do SSO, provisionamento automático de usuários e integração com Slack, Teams e ferramentas de RH.</div>
+          <div class="tl-title">Integração Técnica</div>
+          <div class="tl-desc">SSO, provisionamento de usuários, sincronização com seu HRIS (BambooHR, Gupy, etc) e testes de segurança LGPD.</div>
         </div>
         <div class="tl-row">
           <div class="tl-week">Semana 4</div>
-          <div class="tl-title">Lançamento interno</div>
-          <div class="tl-desc">Kit de comunicação pronto, sessão ao vivo de abertura com nosso time clínico e onboarding guiado para cada colaborador.</div>
+          <div class="tl-title">Lançamento Interno</div>
+          <div class="tl-desc">Kit de comunicação pronto, sessão ao vivo sobre anonimato e segurança, onboarding por setor. Primeiros relatos começam.</div>
         </div>
         <div class="tl-row">
           <div class="tl-week">Semana 12</div>
-          <div class="tl-title">Primeiro relatório de impacto</div>
-          <div class="tl-desc">Leitura conjunta dos primeiros indicadores anonimizados e ajuste fino do programa para o próximo trimestre.</div>
+          <div class="tl-title">Primeiro Relatório de Clima</div>
+          <div class="tl-desc">Leitura clínica dos primeiros indicadores, identificação de alertas e plano de ação para o próximo trimestre com seu CSM.</div>
         </div>
       </div>
     </div>
@@ -683,9 +721,9 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
       </div>
 
       <div class="reveal">
-        <div class="eyebrow"><span class="dot"></span>Privacidade radical</div>
-        <h2 style="margin-top:24px">A sua empresa<br/><span class="italic-accent">nunca vê quem está fragilizado.</span></h2>
-        <p class="lead" style="margin-top:20px">Saúde mental é dado sensível. Por isso, blindamos cada camada do produto para que cuidar de si nunca tenha custo de carreira.</p>
+        <div class="eyebrow"><span class="dot"></span>Anonimato absoluto</div>
+        <h2 style="margin-top:24px">Sua empresa escuta<br/><span class="italic-accent">sem identificar quem sofre.</span></h2>
+        <p class="lead" style="margin-top:20px">Dados são poder. Feedback confidencial é confiança. Nós não compartilhamos nomes, IDs ou características que permitam rastreabilidade.</p>
 
         <ul class="privacy-list">
           <li>
@@ -728,7 +766,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
     <div class="case-card reveal">
       <div>
         <div class="eyebrow on-dark"><span class="dot"></span>Estudo de caso · Aldebra</div>
-        <p class="case-quote" style="margin-top:24px">No nosso primeiro ano com Nexus, vimos uma queda de 40% em afastamentos e algo que não esperávamos: as pessoas começaram a falar abertamente sobre saúde mental nas reuniões 1:1. A cultura inteira mudou.</p>
+        <p class="case-quote" style="margin-top:24px">No nosso primeiro ano com Descarrega Ai, vimos uma queda de 40% em afastamentos e algo que não esperávamos: as pessoas começaram a falar abertamente sobre saúde mental nas reuniões 1:1. A cultura inteira mudou.</p>
         <div class="case-author">
           <span class="av">L</span>
           <div>
@@ -833,7 +871,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
     <div class="demo-card reveal">
       <div>
         <div class="eyebrow"><span class="dot"></span>Demonstração guiada</div>
-        <h2 style="margin-top:24px">Veja o Nexus<br/><span class="italic-accent">com os dados da sua realidade.</span></h2>
+        <h2 style="margin-top:24px">Veja o Descarrega Ai<br/><span class="italic-accent">com os dados da sua realidade.</span></h2>
         <p class="lead">Marque 30 minutos com nosso time. Em uma única conversa, mostramos a plataforma, o dashboard e simulamos o impacto no seu cenário.</p>
         <ul class="demo-list">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Demo personalizada para o seu setor</li>
@@ -903,7 +941,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
       <div class="reveal">
         <div class="eyebrow"><span class="dot"></span>Dúvidas frequentes</div>
         <h2 style="margin-top:24px">Antes de você<br/><span class="italic-accent">perguntar.</span></h2>
-        <p style="margin-top:24px;color:var(--muted)">Não encontrou o que procurava? Fale com nosso time em <a href="mailto:empresas@nexus.app" style="color:var(--ink);text-decoration:underline">empresas@nexus.app</a></p>
+        <p style="margin-top:24px;color:var(--muted)">Não encontrou o que procurava? Fale com nosso time em <a href="mailto:empresas@descarrega.ai" style="color:var(--ink);text-decoration:underline">empresas@descarrega.ai</a></p>
       </div>
       <div class="faq-list reveal">
         <div class="faq-item open">
@@ -911,7 +949,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
             <span>Os dados individuais ficam visíveis para a empresa?</span>
             <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </div>
-          <div class="faq-a"><p>Nunca. A empresa só acessa indicadores agregados, com mínimo de 10 pessoas por recorte. Conversas, sessões e check-ins são confidenciais entre o colaborador e o Nexus.</p></div>
+          <div class="faq-a"><p>Nunca. A empresa só acessa indicadores agregados, com mínimo de 10 pessoas por recorte. Conversas, sessões e check-ins são confidenciais entre o colaborador e o Descarrega Ai.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-q">
@@ -932,7 +970,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
             <span>Funciona para times remotos e híbridos?</span>
             <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </div>
-          <div class="faq-a"><p>Sim — o Nexus foi desenhado para acompanhar pessoas onde elas estão. App, web, integrações com Slack e Teams. Funciona igualmente bem para times 100% remotos, híbridos e presenciais.</p></div>
+          <div class="faq-a"><p>Sim — o Descarrega Ai foi desenhado para acompanhar pessoas onde elas estão. App, web, integrações com Slack e Teams. Funciona igualmente bem para times 100% remotos, híbridos e presenciais.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-q">
@@ -953,18 +991,14 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
       <div class="foot-brand">
         <a class="brand" href="Landing Page.html">
           <span class="brand-mark" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 5v9a4 4 0 0 0 8 0V5" stroke="#B0D2DF"/>
-              <path d="M10 5v15" stroke="#B0D2DF"/>
-              <path d="M14 19V8l6 11V8"/>
-            </svg>
+            <img src="assets/logo_descarrega_ai.jpeg" alt="Descarrega Ai" />
           </span>
           <span class="brand-text">
-            <span>Nexus</span>
-            <span class="brand-sub">Saúde Corporativa</span>
+            <span>Descarrega Ai</span>
+            <span class="brand-sub">Ouvidoria Interna</span>
           </span>
         </a>
-        <p>Inteligência clínica para o ambiente corporativo. Cuidamos da saúde emocional de profissionais que carregam o peso do mundo no laptop.</p>
+        <p>Ouvidoria interna para empresas que querem escutar seus colaboradores de verdade. Feedback anônimo, clima organizacional claro, ação preventiva contra rotatividade.</p>
         <div class="socials" style="margin-top:24px">
           <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -984,7 +1018,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
       <div class="foot-col">
         <h4>Empresa</h4>
         <ul>
-          <li><a href="#">Sobre o Nexus</a></li>
+          <li><a href="#">Sobre a Descarrega Ai</a></li>
           <li><a href="#">Conselho clínico</a></li>
           <li><a href="#">Carreiras</a></li>
           <li><a href="#">Imprensa</a></li>
@@ -1003,7 +1037,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Nexus Saúde Corporativa · Todos os direitos reservados</span>
+      <span>© 2026 Descarrega Ai Ouvidoria Interna · Todos os direitos reservados</span>
       <div class="legal">
         <a href="#">Política de privacidade</a>
         <a href="#">Termos de uso</a>
