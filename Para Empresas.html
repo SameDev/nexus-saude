@@ -148,6 +148,39 @@ section{padding: 120px 0; position:relative}
   position: relative;
   overflow: hidden;
 }
+.device-mock{
+  width: min(520px, 92%);
+  margin: 0 auto;
+}
+.device-frame{
+  position: relative;
+  background: var(--ink);
+  padding: 14px;
+  border-radius: 34px;
+  border: 1px solid rgba(176,210,223,0.2);
+  box-shadow:
+    0 50px 90px -30px rgba(5,29,65,0.45),
+    0 18px 40px -20px rgba(5,29,65,0.3),
+    inset 0 0 0 1px rgba(176,210,223,0.15);
+}
+.device-screen{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
+.device-notch{
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 16px;
+  background: var(--ink);
+  border-radius: 0 0 12px 12px;
+  box-shadow: inset 0 0 0 1px rgba(176,210,223,0.15);
+  z-index: 2;
+}
 .dash-window{
   display:flex;align-items:center;justify-content:space-between;
   margin: -22px -22px 22px;
@@ -294,7 +327,8 @@ section{padding: 120px 0; position:relative}
 .plan.featured .plan-head p{color: var(--mist)}
 .plan-price{font-family: var(--serif); font-size: 56px; font-weight: 400; line-height: 1; letter-spacing: -0.025em; color: var(--ink)}
 .plan.featured .plan-price{color: var(--on-dark)}
-.plan-price small{font-size: 15px; font-style: italic; color: var(--muted); display: block; margin-top: 8px; font-weight: 300}
+.plan-price small{font-size: 16px; color: var(--muted); display: block; margin-top: 8px; font-weight: 300}
+.plan-price small{font-family: var(--sans)}
 .plan.featured .plan-price small{color: var(--mist)}
 .plan ul{list-style:none; display: flex; flex-direction: column; gap: 14px}
 .plan li{display:flex; gap: 10px; font-size: 14px; color: var(--muted-2); align-items: flex-start}
@@ -437,8 +471,8 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
       <a href="#pricing">Planos</a>
     </nav>
     <div class="nav-cta">
-      <a href="#login" class="btn btn-ghost">Entrar</a>
-      <a href="#demo" class="btn btn-primary">
+      <a href="https://descarrega-ai-deploy.vercel.app" class="btn btn-ghost">Entrar</a>
+      <a href="https://descarrega-ai-deploy.vercel.app" class="btn btn-primary">
         Solicitar apresentação
         <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -457,7 +491,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         <span class="italic-accent">Você finalmente ouve.</span>
       </h1>
       <p class="lead">
-        Uma plataforma de ouvidoria interna para empresas que querem detectar problemas organizacionais antes de perder talentos. Feedback anônimo por setor, alertas inteligentes sobre risco de burnout, conflitos internos e alta rotatividade.
+        Plataforma de ouvidoria interna em fase de lançamento. Feedback anônimo por setor, alertas inteligentes e relatórios claros para validar o impacto com os primeiros times.
       </p>
       <div class="hero-actions">
         <a href="#demo" class="btn btn-primary">
@@ -467,66 +501,18 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         <a href="#pricing" class="btn btn-outline">Ver planos</a>
       </div>
       <div class="hero-meta">
-        <div class="m"><strong>−42%</strong><span>afastamentos por saúde mental</span></div>
-        <div class="m"><strong>4.8/5</strong><span>satisfação dos colaboradores</span></div>
-        <div class="m"><strong>12 sem</strong><span>até o primeiro impacto medido</span></div>
+        <div class="m"><strong>Piloto</strong><span>aberto para os primeiros times</span></div>
+        <div class="m"><strong>Beta</strong><span>foco na validação do fluxo</span></div>
+        <div class="m"><strong>12 sem</strong><span>janela de aprendizado e iteração</span></div>
       </div>
     </div>
 
-    <!-- Dashboard mockup -->
+    <!-- Dashboard image -->
     <div class="dash">
-      <div class="dash-window">
-        <div class="dash-dots"><span></span><span></span><span></span></div>
-        <div class="dash-url">descarrega.ai/empresa/aldebra</div>
-        <div style="width:50px"></div>
-      </div>
-      <div class="dash-grid">
-        <div class="dash-card dark wide">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start">
-            <div>
-              <span class="dash-label">Índice de equilíbrio · Outubro</span>
-              <div class="dash-num">7.4<small>/10</small></div>
-              <div class="dash-delta"><span class="up">▲ +0.8</span> vs. trimestre anterior</div>
-            </div>
-            <div style="text-align:right;color: var(--mist)">
-              <span class="dash-label" style="color: var(--mist)">Colaboradores ativos</span>
-              <div style="font-family: var(--serif); font-size: 28px; margin-top: 8px">428 <small style="font-size:13px; font-style:italic; opacity:.6">/ 512</small></div>
-            </div>
-          </div>
-          <svg class="spark" viewBox="0 0 300 40" preserveAspectRatio="none">
-            <path d="M0,28 C30,24 50,30 80,22 C110,14 140,18 170,12 C200,6 230,10 260,8 L300,4" fill="none" stroke="#B0D2DF" stroke-width="1.5"/>
-            <path d="M0,28 C30,24 50,30 80,22 C110,14 140,18 170,12 C200,6 230,10 260,8 L300,4 L300,40 L0,40 Z" fill="url(#g1)" opacity="0.3"/>
-            <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#B0D2DF"/><stop offset="100%" stop-color="#B0D2DF" stop-opacity="0"/></linearGradient></defs>
-          </svg>
-        </div>
-
-        <div class="dash-card">
-          <span class="dash-label">Sinais de risco</span>
-          <div class="dash-num">12<small> times</small></div>
-          <div class="dash-delta"><span class="down">▼ −5</span> esta semana</div>
-        </div>
-
-        <div class="dash-card">
-          <span class="dash-label">Engajamento</span>
-          <div class="dash-num">84<small>%</small></div>
-          <div class="mini-chart">
-            <div class="mini-bar" style="height:40%"></div>
-            <div class="mini-bar" style="height:55%"></div>
-            <div class="mini-bar" style="height:48%"></div>
-            <div class="mini-bar" style="height:62%"></div>
-            <div class="mini-bar" style="height:70%"></div>
-            <div class="mini-bar" style="height:78%"></div>
-            <div class="mini-bar" style="height:84%"></div>
-          </div>
-        </div>
-
-        <div class="dash-card wide" style="display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <span class="dash-label">Próxima ação sugerida</span>
-            <div style="font-family: var(--serif); font-size: 20px; margin-top: 8px; letter-spacing: -0.005em">Workshop de pausas conscientes · Time de Engenharia</div>
-            <p style="font-size: 13px; color: var(--muted); margin-top: 4px">3 sinais de sobrecarga detectados nas últimas 2 semanas</p>
-          </div>
-          <a href="#" class="btn btn-outline" style="padding: 10px 16px; font-size: 13px">Agendar</a>
+      <div class="device-mock">
+        <div class="device-frame">
+          <span class="device-notch" aria-hidden="true"></span>
+          <img class="device-screen" src="assets/tela_sistema.png" alt="Tela do sistema Descarrega Ai" />
         </div>
       </div>
     </div>
@@ -535,51 +521,15 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
   <div class="wrap">
     <div class="trust-strip">
       <div class="trust-inner">
-        <small>Empresas que confiam no Descarrega Ai para cuidar de seus times</small>
+        <small>Piloto aberto para empresas e equipes em validação</small>
         <div class="trust-logos">
-          <span style="font-style:italic">Lumen &amp; Co.</span>
-          <span>CONSORTA</span>
-          <span style="letter-spacing:0.2em;font-size:14px;font-family:var(--sans);font-weight:600">VERTICE</span>
-          <span>Aldebra</span>
-          <span style="font-style:italic">Margem</span>
-          <span>Pollar Group</span>
+          <span style="font-style:italic">Tecnologia</span>
+          <span>Saúde</span>
+          <span style="letter-spacing:0.2em;font-size:14px;font-family:var(--sans);font-weight:600">Finanças</span>
+          <span>Indústria</span>
+          <span style="font-style:italic">Varejo</span>
+          <span>Educação</span>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OUTCOMES -->
-<section class="outcomes" id="outcomes">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <div class="eyebrow"><span class="dot"></span>Impacto detectável</div>
-        <h2>Números que revelam<br/><span class="italic-accent">o que muda com feedback real.</span></h2>
-      </div>
-      <p>Resultados reportados por empresas que usam Descarrega Ai para ouvidoria interna. O que você consegue medir quando escuta de verdade.</p>
-    </div>
-
-    <div class="outcomes-grid reveal">
-      <div class="outcome">
-        <span class="label">Rotatividade</span>
-        <div class="big">−31<sub>%</sub></div>
-        <p>Redução em pedidos de demissão após 6 meses.</p>
-      </div>
-      <div class="outcome">
-        <span class="label">Detecção</span>
-        <div class="big">89<sub>%</sub></div>
-        <p>De problemas identificados antes da crise.</p>
-      </div>
-      <div class="outcome">
-        <span class="label">Engajamento</span>
-        <div class="big">+27<sub>%</sub></div>
-        <p>Aumento em confiança com gestão e RH.</p>
-      </div>
-      <div class="outcome">
-        <span class="label">ROI</span>
-        <div class="big">6,2<sub>×</sub></div>
-        <p>Economia por retenção vs. custos de implementação.</p>
       </div>
     </div>
   </div>
@@ -593,7 +543,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         <div class="eyebrow"><span class="dot"></span>Painel de Gestores</div>
         <h2>Inteligência clara sobre<br/><span class="italic-accent">o que suas equipes precisam.</span></h2>
       </div>
-      <p>Relatórios emocionais por setor, alertas de burnout, indicadores de clima organizacional e frequência de relatos. Você entende o clima real — sem invadir privacidade.</p>
+      <p>Relatórios emocionais por setor, alertas de burnout, indicadores de clima organizacional e frequência de relatos. Você entende o clima real — sem invadir a privacidade.</p>
     </div>
 
     <div class="features-grid">
@@ -615,7 +565,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         </div>
         <div>
           <h3>Alertas Inteligentes<br/>de Risco</h3>
-          <p>Sistema detecta automaticamente: risco de burnout, conflitos internos, queda de produtividade, sinais de possível rotatividade. Ativa quando evidência é clara.</p>
+          <p>O sistema detecta automaticamente: risco de burnout, conflitos internos, queda de produtividade e sinais de possível rotatividade. É ativado quando a evidência é clara.</p>
         </div>
       </div>
 
@@ -648,7 +598,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         </div>
         <div>
           <h3>Sugestões de Ação<br/>Executiva</h3>
-          <p>Não é apenas diagnóstico. Para cada alerta, recomendações concretas baseadas em boas práticas de gestão de clima organizacional.</p>
+          <p>Não é apenas um diagnóstico. Para cada alerta, recomendações concretas baseadas em boas práticas de gestão de clima organizacional.</p>
         </div>
       </div>
 
@@ -659,7 +609,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         </div>
         <div>
           <h3>Suporte de CS<br/>Dedicado</h3>
-          <p>Customer Success e clínica disponíveis para interpretar dados, validar hipóteses e planejar ações. Não somos ferramenta — somos parceiros.</p>
+          <p>Customer Success e equipe clínica estão disponíveis para interpretar dados, validar hipóteses e planejar ações. Não somos apenas uma ferramenta — somos parceiros.</p>
         </div>
       </div>
     </div>
@@ -673,7 +623,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
       <div class="eyebrow on-dark"><span class="dot"></span>Implementação</div>
       <div class="section-head" style="margin-bottom:0">
         <h2 style="color:var(--on-dark)">Do contrato à cultura<br/><span class="italic-accent on-dark">em poucas semanas.</span></h2>
-        <p class="lead" style="color: var(--on-dark-muted)">Implantação assistida com diagnóstico clínico, integração técnica e comunicação interna. Sua empresa começa a ouvir desde a semana 1.</p>
+        <p class="lead" style="color: var(--on-dark-muted)">Implantação assistida com diagnóstico clínico, integração técnica e comunicação interna. Sua empresa começa a ouvir a partir da semana 1.</p>
       </div>
     </div>
 
@@ -682,7 +632,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         <div class="tl-row">
           <div class="tl-week">Semana 1</div>
           <div class="tl-title">Diagnóstico e Customização</div>
-          <div class="tl-desc">Workshops com RH e lideranças para mapear pain points, definir métricas-chave e personalizar categorias de feedback.</div>
+          <div class="tl-desc">Workshops com RH e lideranças para mapear pontos críticos, definir métricas-chave e personalizar categorias de feedback.</div>
         </div>
         <div class="tl-row">
           <div class="tl-week">Semana 2 — 3</div>
@@ -692,7 +642,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         <div class="tl-row">
           <div class="tl-week">Semana 4</div>
           <div class="tl-title">Lançamento Interno</div>
-          <div class="tl-desc">Kit de comunicação pronto, sessão ao vivo sobre anonimato e segurança, onboarding por setor. Primeiros relatos começam.</div>
+          <div class="tl-desc">Kit de comunicação pronto, sessão ao vivo sobre anonimato e segurança, onboarding por setor. Os primeiros relatos começam.</div>
         </div>
         <div class="tl-row">
           <div class="tl-week">Semana 12</div>
@@ -751,7 +701,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
             <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
             <div>
               <strong>DPO e contrato dedicado</strong>
-              <p>Cada cliente conta com DPO próprio, contrato de processamento padrão LGPD e canal direto para auditorias.</p>
+              <p>Cada empresa no piloto conta com DPO próprio, contrato de processamento padrão LGPD e canal direto para auditorias.</p>
             </div>
           </li>
         </ul>
@@ -765,32 +715,32 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
   <div class="wrap">
     <div class="case-card reveal">
       <div>
-        <div class="eyebrow on-dark"><span class="dot"></span>Estudo de caso · Aldebra</div>
-        <p class="case-quote" style="margin-top:24px">No nosso primeiro ano com Descarrega Ai, vimos uma queda de 40% em afastamentos e algo que não esperávamos: as pessoas começaram a falar abertamente sobre saúde mental nas reuniões 1:1. A cultura inteira mudou.</p>
+        <div class="eyebrow on-dark"><span class="dot"></span>Pesquisa interna</div>
+        <p class="case-quote" style="margin-top:24px">A liderança ignora quem tem cargos de base, nos sentimos invisíveis.</p>
         <div class="case-author">
-          <span class="av">L</span>
+          <span class="av">P</span>
           <div>
-            <strong>Letícia Vasconcellos</strong>
-            <small>Chief People Officer · Aldebra · 1.200 colaboradores</small>
+            <strong>Pesquisa interna</strong>
+            <small>Base: 60 colaboradores</small>
           </div>
         </div>
       </div>
       <div class="case-stats">
         <div class="case-stat">
-          <div class="big">−40<sub>%</sub></div>
-          <p>afastamentos por saúde mental</p>
+          <div class="big">67%</div>
+          <p>vivenciam insegurança no trabalho</p>
         </div>
         <div class="case-stat">
-          <div class="big">+62<sub>%</sub></div>
-          <p>adoção em 90 dias</p>
+          <div class="big">52%</div>
+          <p>descrevem o ambiente como tenso ou instável</p>
         </div>
         <div class="case-stat">
-          <div class="big">4,9<sub>/5</sub></div>
-          <p>NPS interno do programa</p>
+          <div class="big">22%</div>
+          <p>medo de falar com o superior</p>
         </div>
         <div class="case-stat">
-          <div class="big">R$2,1<sub>M</sub></div>
-          <p>economia estimada no 1º ano</p>
+          <div class="big">58%</div>
+          <p>impacto neutro ou negativo da liderança no clima</p>
         </div>
       </div>
     </div>
@@ -805,21 +755,16 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         <div class="eyebrow"><span class="dot"></span>Planos</div>
         <h2>Um plano para cada<br/><span class="italic-accent">tamanho de cuidado.</span></h2>
       </div>
-      <p>Preços por colaborador ativo. Inclui app completo, dashboards anônimos, suporte clínico e Customer Success dedicado a partir do plano Time.</p>
-    </div>
-
-    <div class="plan-toggle reveal" id="planToggle">
-      <button class="active" data-period="month">Mensal</button>
-      <button data-period="year">Anual<span class="save">−20%</span></button>
+      <p>Assinatura mensal com planos acessíveis e escaláveis, de acordo com o tamanho da sua equipe. Monitoramento do clima organizacional em tempo real, check-ins rápidos e relatórios para agir antes de afetar produtividade e ambiente.</p>
     </div>
 
     <div class="plans">
       <div class="plan reveal">
         <div class="plan-head">
-          <h3>Essencial</h3>
-          <p>Para times pequenos começando o cuidado.</p>
+          <h3>Base</h3>
+          <p>Para equipes pequenas que querem começar a ouvir.</p>
         </div>
-        <div class="plan-price" data-month="R$ 29" data-year="R$ 23">R$ 29<small>por colaborador / mês · até 50 pessoas</small></div>
+        <div class="plan-price">R$ 79,90<small>por mês · até 30 usuários</small></div>
         <ul>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>App completo para colaboradores</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Biblioteca clínica + exercícios guiados</li>
@@ -831,10 +776,10 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
 
       <div class="plan featured reveal">
         <div class="plan-head">
-          <h3>Time</h3>
-          <p>Para empresas em crescimento, com cultura em construção.</p>
+          <h3>Pro</h3>
+          <p>Para empresas em crescimento com mais times.</p>
         </div>
-        <div class="plan-price" data-month="R$ 39" data-year="R$ 31">R$ 39<small>por colaborador / mês · 50–500 pessoas</small></div>
+        <div class="plan-price">R$ 149,90<small>por mês · até 80 usuários</small></div>
         <ul>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Tudo do Essencial</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Dashboards agregados por área</li>
@@ -848,10 +793,10 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
 
       <div class="plan reveal">
         <div class="plan-head">
-          <h3>Corporativo</h3>
-          <p>Para grandes operações com complexidade cultural.</p>
+          <h3>Enterprise</h3>
+          <p>Para grandes operações com usuários ilimitados.</p>
         </div>
-        <div class="plan-price" style="font-size:36px">Sob consulta<small>para times com 500+ colaboradores</small></div>
+        <div class="plan-price" style="font-size:36px">Sob consulta<small>usuários ilimitados</small></div>
         <ul>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Tudo do Time</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Programas customizados por área</li>
@@ -899,7 +844,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
         <div class="field-row">
           <div class="field">
             <label for="empresa">Empresa</label>
-            <input id="empresa" type="text" placeholder="Aldebra" required>
+            <input id="empresa" type="text" placeholder="Sua empresa" required>
           </div>
           <div class="field">
             <label for="tamanho">Tamanho do time</label>
@@ -963,14 +908,14 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
             <span>Quanto tempo leva a implementação?</span>
             <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </div>
-          <div class="faq-a"><p>Em média, 4 semanas do contrato ao lançamento interno. O primeiro relatório de impacto sai em 12 semanas, com leitura conjunta do seu CSM.</p></div>
+          <div class="faq-a"><p>Em média, são 4 semanas do contrato ao lançamento interno. O primeiro relatório de impacto sai em 12 semanas, com leitura conjunta do seu CSM.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-q">
             <span>Funciona para times remotos e híbridos?</span>
             <span class="toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </div>
-          <div class="faq-a"><p>Sim — o Descarrega Ai foi desenhado para acompanhar pessoas onde elas estão. App, web, integrações com Slack e Teams. Funciona igualmente bem para times 100% remotos, híbridos e presenciais.</p></div>
+          <div class="faq-a"><p>Sim — o Descarrega Ai foi desenhado para acompanhar pessoas onde elas estão. App, web, integrações com Slack e Teams. Funciona igualmente bem para equipes 100% remotas, híbridas e presenciais.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-q">
@@ -998,7 +943,7 @@ footer{padding: 80px 0 40px; border-top: 1px solid var(--line);}
             <span class="brand-sub">Ouvidoria Interna</span>
           </span>
         </a>
-        <p>Ouvidoria interna para empresas que querem escutar seus colaboradores de verdade. Feedback anônimo, clima organizacional claro, ação preventiva contra rotatividade.</p>
+        <p>Ouvidoria interna para empresas que querem ouvir seus colaboradores de verdade. Feedback anônimo, clima organizacional claro e ação preventiva contra rotatividade.</p>
         <div class="socials" style="margin-top:24px">
           <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -1079,23 +1024,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         window.scrollTo({top: t.offsetTop - 80, behavior:'smooth'});
       }
     }
-  });
-});
-
-// Plan toggle (monthly / yearly)
-const toggle = document.getElementById('planToggle');
-toggle.querySelectorAll('button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    toggle.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const period = btn.dataset.period;
-    document.querySelectorAll('.plan-price').forEach(p => {
-      const value = p.dataset[period];
-      if (!value) return;
-      const small = p.querySelector('small');
-      p.firstChild.nodeValue = value;
-      if (small) p.appendChild(small);
-    });
   });
 });
 
